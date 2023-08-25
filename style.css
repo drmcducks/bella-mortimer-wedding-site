@@ -18,10 +18,20 @@ body{
     background-color: #efe9e1;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 200px;
+    position: relative;
+}
+
+.heads{
+    position:relative;
+    text-align: center;
+}
+
+.contnts{
+    margin-top: 50px;
+    text-align: center;
 }
 #frm-login, #frm-rspnd{
     font-family: 'Cardo';
@@ -29,7 +39,7 @@ body{
     background-color: #d9d9d9;
     border-radius: 2%;
     padding: 0.7rem;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
     max-width: 30rem;
@@ -37,8 +47,9 @@ body{
 
 .ourstory{
     font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    text-justify: inter-word;
     font-size: 1.2rem;
-    border-radius: 2%;
     padding: 0.7rem;
     margin-top: 50px;
     margin-left: auto;
@@ -105,13 +116,35 @@ input[type=submit] {
 }
 
 #map {
-   margin-top: 80px;
+   margin-top: 50px;
   }
 
 .buttons:hover{
     background: #642f34;
     color: #fff;
 }
+.dtable{
+    
+    position: relative;
+    border-style: solid;
+    width: 45%;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+.dtable tr:nth-child(even){background-color: #f2f2f2;}
+.dtable tr:hover {background-color: #ddd;}
+.dtable td, .dtable th {
+    text-align: left;
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+.dtable th {
+    text-align: center;
+    background-color: #72383d;
+    color: white;
+  }
+
 
 footer{
     margin-top: 120px;

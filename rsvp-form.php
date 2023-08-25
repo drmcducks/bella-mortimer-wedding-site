@@ -26,7 +26,9 @@ if(isset($_POST["submit"])){
 </head>
 <body>
     <div class="wrap">
-        <h1 class="title" onclick="window.location='index.html'">Bella & Mortimer</h1>
+        <div class="heads">
+            <h1 class="title" onclick="window.location='index.html'">Bella & Mortimer</h1>
+        </div>
         <form id="frm-rspnd" accept-charset="utf-8" action="" method="post">
            <label for="fname">Full Name</label><br>
            <input type="text" name="fname" id="fname" placeholder="Input Your Name Here">
@@ -43,6 +45,6 @@ if(isset($_POST["submit"])){
            <input type="submit" value="RSVP" name="submit">
         </form>
     </div>
-    <footer>© 2023 Kuang Andrew | <a href="login.php">Log-in</a></footer>
+    <footer>© 2023 Made with ☕by Kuang Andrew | <a href="login.php">Log-in</a></footer>
 </body>
 </html>

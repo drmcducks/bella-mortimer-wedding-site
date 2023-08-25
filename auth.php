@@ -15,12 +15,12 @@
                 $stmt->bind_result($id, $password);
                 $stmt->fetch();
 
-                if($_POST['password'] === $password){
+                if($_POST['passwd'] === $password){
                     session_regenerate_id();
                     $_SESSION['loggedin'] = TRUE;
-                    $_SESSION['name'] = $_SESSION['name'];
+                    $_SESSION['email'] = $_SESSION['email'];
                     $_SESSION['id'] = $id;
-                    echo 'Welcome'.$_SESSION['name'].'!';
+                    header('Location: guest-list.php');
                 }
                 else{
                     echo "

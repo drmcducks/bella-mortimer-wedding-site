@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    include ("database-con.php");
+    if(isset($_SESSION['loggedin'])){
+        echo "<script>alert('You already logged-in');
+            window.location.href='guest-list.php';
+        </script>";
+    }else{
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +18,9 @@
 </head>
 <body>
     <div class="wrap">
+    <div class="heads">
+            <h1 class="title" onclick="window.location='login.php'">Login</h1>
+        </div>
     <form id="frm-login" accept-charset="utf-8" action="auth.php" method="post">
            <label for="email">Email</label><br>
            <input type="text" name="email" id="email" placeholder="Input Your Email">
@@ -18,6 +30,16 @@
            <br>
            <input type="submit" value="Login">
     </div>
-    <footer>© 2023 Kuang Andrew | <a href="logout.php">Logout</a> | <a href="index.html">Home</a></footer>
+    <footer>© 2023 Made with ☕by Kuang Andrew |
+    <?php
+       if(!isset($_SESSION['loggedin'])){
+        echo "<a href='index.html'>Home</a></footer>";
+       }else{
+        echo "<a href='logout.php'>Logout</a> | <a href='index.html'>Home</a></footer>";
+       }
+    ?>
 </body>
 </html>
+<?php
+    }
+?>
